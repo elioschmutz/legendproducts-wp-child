@@ -1,0 +1,55 @@
+/*
+    Template:       mantis
+    Theme Name:     Mantis Child
+    Theme URI:      http://themeforest.net/user/LA-Studio/portfolio?ref=LA-Studio
+    Author:         LA Studio
+    Author URI:     http://themeforest.net/user/LA-Studio?ref=LA-Studio
+    Description:    Mantis - Minimal & Modern WooCommerce Theme
+    Version:        1.0
+    Tags:           one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, translation-ready
+    License: 		    GNU General Public License
+	  License URI: 	  licence/GPL.txt
+    Text Domain:    mantis-child
+    Domain Path:    /languages/
+*/
+@font-face {
+    font-family: 'Lovely Home';
+    src: url('/wp-content/uploads/LovelyHome.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.site-header-top {
+    padding: 0;
+}
+.header-top-elements span{
+    color: #666 !important;
+}
+.site-header .site-header-inner {
+    background-size: 80px;
+      padding-bottom: 1em;
+}
+
+#menu-hauptmenu > li.wpml-ls-menu-item {
+    position: absolute !important;
+    top: -40px;
+    right: 0;
+}
+#menu-hauptmenu > li.wpml-ls-menu-item .popup{
+  margin-top: 0px;
+}
+.footer-logo img{
+    max-width: 150px !important;
+}
+.woocommerce-shipping-destination {
+ display: none;
+}
+.cart-collaterals .shipping label {
+ padding-left: 0;
+}
+.woocommerce-cart .not-active-fullpage > .woocommerce .cart-collaterals .shop_table th {
+ padding-right: 0.5em;
+}
+.site-header-inner {
+  box-shadow: 0px 1px 1px 0px ;
+}
