@@ -30,12 +30,14 @@
       padding-bottom: 1em;
 }
 
-#menu-hauptmenu > li.wpml-ls-menu-item {
+#menu-hauptmenu > li.wpml-ls-menu-item,
+#menu-menu-principal > li.wpml-ls-menu-item {
     position: absolute !important;
     top: -40px;
     right: 0;
 }
-#menu-hauptmenu > li.wpml-ls-menu-item .popup{
+#menu-hauptmenu > li.wpml-ls-menu-item .popup,
+#menu-menu-principal > li.wpml-ls-menu-item .popup {
   margin-top: 0px;
 }
 .footer-logo img{
