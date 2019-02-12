@@ -81,6 +81,21 @@ function not_approved_privacy() {
     }
 }
 
+add_action( 'woocommerce_checkout_order_processed', 'send_on_newsletter_subscription', 10, 3 );
+
+function send_on_newsletter_subscription( $order_id, $posted_data, $order ) {
+    if ($_POST['newsletter'] != '1') {
+        return;
+    }
+	
+    $to = get_option('woocommerce_email_from_address');
+    $subject = 'Newsletteranmeldung über eine Bestellung';
+    $body = $posted_data['billing_first_name'] . ' ' . $posted_data['billing_last_name'] . ' hat sich mit der E-Mail: ' . $posted_data['billing_email'] . ' für den Newsletter angemeldet.' . '<br><br><a href="' . get_option('siteurl') . '/wp-admin/post.php?post=' . $order_id . '&action=edit">Bestellung #' .$order_id . ' ansehen</a>';
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+ 
+    wp_mail( $to, $subject, $body, $headers );
+}
+
 add_action( 'woocommerce_cart_totals_after_shipping', 'delivery_time', 90);
 add_action( 'woocommerce_review_order_after_shipping', 'delivery_time', 90);
 add_filter( 'woocommerce_package_rates', 'show_only_free_shipping_if_available', 90 );
