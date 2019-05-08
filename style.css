@@ -31,6 +31,7 @@
 }
 
 #menu-hauptmenu > li.wpml-ls-menu-item,
+#menu-hauptmenu-it > li.wpml-ls-menu-item,
 #menu-menu-principal > li.wpml-ls-menu-item {
     position: absolute !important;
     top: -40px;
